@@ -6,7 +6,7 @@ Como ya sabemos, no podemos hacer uso de una palabra reservada como nombre de un
 let continue = 4 // esto da error
 ```
 
-A continuación se muestran las tablas con las palabras reservadas tanto de *JavaScript* como de *TypeScript*. Para más información sobre las palabras reservadas, puedes consultar la [documentación oficial de TypeScript](https://www.typescriptlang.org/docs/handbook/variable-declarations.html#reserved-words).
+A continuación se muestran las tablas con las palabras reservadas tanto de *JavaScript* como de *TypeScript*
 
 <table border="1">
     <thead>
