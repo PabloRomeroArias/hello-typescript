@@ -1,13 +1,14 @@
 # Operadores Relacionales
 
-1. Juan y Pedro son amigos de la infancia y quieren saber si tienen la misma edad (vaya amigos...). Compara sus edades y muestra el resultado
+Los operadores relacionales se utilizan para comparar dos valores. El resultado de una comparación es un valor booleano (`true` o `false`). Estos operadores son fundamentales para la toma de decisiones en el código, ya que permiten evaluar condiciones y ejecutar diferentes bloques de código en función del resultado de estas evaluaciones
 
-2. Tu cuñado está comparando los precios de dos teléfonos móviles. Como no tiene ni idea, te pregunta a tí que eres informático (y hacker). Sus opciones son un iPhone 15 y un Samsung Galaxy S24. Verifica si los precios son distintos y aconseja a tu cuñado
-
-3. Mi prima pequeña siempre ha soñado con montarse en la atracción Jaguar del parque de atracciones de la ciudad. La altura mínima para entrar es 140 cm. ¿Podrá por fin este año cumplir su sueño?
-
-4. Mario y Luigi han completado y obtenido diferentes puntuaciones en la carrera del circuito Arcoiris. Yo soy más de Luigi, ¿es mayor su puntuación?
-
-5. Una persona quiere saber si cumple con la edad mínima requerida para votar. Verifica si la persona tiene la edad mínima y muestra el resultado.
-
-6. NYC y LA tienen diferentes temperaturas. Las temperaturas vienen en ºF y ºK. Debido a mi desconocimiento, necesito que compares las temperaturas en ºC y determina si la temperatura de Nueva York es menor o igual que la de Los Ángeles
+| Operador               | Símbolo | Descripción                                                                      | Ejemplo   |
+|------------------------|:-------:|----------------------------------------------------------------------------------|-----------|
+| Igualdad               | `==`    | Compara si dos valores son iguales (comparación débil)                           | `a == b`  |
+| Estrictamente Igual    | `===`   | Compara si dos valores son iguales y del mismo tipo (comparación estricta)       | `a === b` |
+| Desigualdad            | `!=`    | Compara si dos valores son diferentes (comparación débil)                        | `a != b`  |
+| Estrictamente Desigual | `!==`   | Compara si dos valores son diferentes y de diferente tipo (comparación estricta) | `a !== b` |
+| Mayor que              | `>`     | Compara si el valor de la izquierda es mayor que el de la derecha                | `a > b`   |
+| Mayor o igual que      | `>=`    | Compara si el valor de la izquierda es mayor o igual que el de la derecha        | `a >= b`  |
+| Menor que              | `<`     | Compara si el valor de la izquierda es menor que el de la derecha                | `a < b`   |
+| Menor o igual que      | `<=`    | Compara si el valor de la izquierda es menor o igual que el de la derecha        | `a <= b`  |

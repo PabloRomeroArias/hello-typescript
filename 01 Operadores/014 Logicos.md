@@ -1,17 +1,220 @@
 # Operadores Lógicos
 
-1. Harry Potter quiere saber si puede ir al Bosque Prohibido. Para ello, necesita que la capa de invisibilidad no la tenga Ron y que Hagrid esté despierto para que le explique los nuevos peligros que acechan Hogwarts
+Los operadores lógicos son fundamentales en programación. Se utilizan para realizar operaciones lógicas sobre **proposiciones**. Las proposiciones son afirmaciones que pueden ser verdaderas o falsas. Se suelen denotar con letras como `p` y `q`
 
-2. María está decidiendo si comprar un nuevo teléfono. Ella comprará el teléfono si no es más antiguo que del año 2022 o si tiene un descuento mínimo del 20%
+Un ejemplo de proposición podría ser:
+- **Proposición `p`**: "Está lloviendo."
+- **Proposición `q`**: "Es de noche."
 
-3. Pedro quiere saber si puede ver una película en el cine. Para ello, necesita que la película esté en cartelera y que tenga suficiente dinero para la entrada, él tiene 5€ y el cine cuesta 4.5€
+## Principales Operadores Lógicos
 
-4. Elsa está organizando una fiesta en Arendelle y quiere saber si puede usar el jardín del castillo. Para ello, necesita que haga buen tiempo (xD) con una temperatura entre -5 y 10 ºC (xDD) y que Olaf haya comprado los adornos. ¿Se puede celebrar la fiesta?
+### AND Lógico (`^`)
+Este operador devuelve `true` si ambas proposiciones son verdaderas. Si alguna de las proposiciones es falsa, devuelve `false`
+Notación: `p ^ q`
 
-5. Luis está eligiendo una película para ver en casa. Está buscando una de acción y que tenga críticas con una puntuación mejor que 7.5 en IMDb
+### OR Lógico (`∨`):
+Este operador devuelve `true` si al menos una de las proposiciones es verdadera. Si ambas proposiciones son falsas, devuelve `false`
+Notación: `p ∨ q`
 
-6. Marta está decidiendo si ir de vacaciones. Se irá si tiene ahorrado al menos 1000€, o si encuentra una oferta de última hora con un descuento mayor al 30%
+### NOT Lógico (`¬`):
+Este operador invierte el valor de una proposición. Si la proposición es `true`, devuelve `false`, y viceversa
+Notación: `¬p`
 
-7. Mi sobrino nació el 29 de febrero de 2024. Quiero saber si en el año 2036 podrá celebrar su cumpleaños
+## Tablas de Verdad
 
-8. Calcula cuántos años ficticios tendrá mi sobrino en el año 2048
+Una tabla de verdad es una herramienta que se utiliza para mostrar todos los posibles valores de una expresión lógica y su resultado. Aquí tienes las tablas de verdad para los operadores lógicos principales:
+
+### AND Lógico (`^`)
+
+| `p`   | `q`   | `p ^ q` |
+|-------|-------|---------|
+| true  | true  | true    |
+| true  | false | false   |
+| false | true  | false   |
+| false | false | false   |
+
+### OR Lógico (`∨`)
+
+| `p`   | `q`   | `p ∨ q` |
+|-------|-------|---------|
+| true  | true  | true    |
+| true  | false | true    |
+| false | true  | true    |
+| false | false | false   |
+
+### NOT Lógico (`¬`)
+
+| `p`   | `¬p`  |
+|-------|-------|
+| true  | false |
+| false | true  |
+
+## Operadores lógicos en programación
+
+| Operador Lógico | Matemáticas | Programación |
+|-----------------|-------------|--------------|
+| AND             | `^`         | `&&`         |
+| OR              | `∨`         | `\|\|`       |
+| NOT             | `¬`         | `!`          |
+
+```typescript
+// El ejemplo en código sería el siguiente
+let estaLloviendo = true // p
+let esDeNoche = false // q
+
+// Si queremos evaluar la expresión ¬(¬p v q)
+let seCumpleCondicion = !(!estaLloviendo || esDeNoche) // el valor de seCumpleCondicion será true o false???
+```
+
+## Ejercicios de tablas de verdad
+
+**Pista**: para saber cuántas filas tendrá la tabla de verdad, hay que aplicar la fórmula 2^n. Siendo *n* el número de proposiciones
+
+## Ejercicio 1
+
+Crea la tabla de verdad para la expresión lógica `p ^ q`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `q`   | `p ^ q` |
+|-------|-------|---------|
+| true  | true  | true    |
+| true  | false | false   |
+| false | true  | false   |
+| false | false | false   |
+
+</details>
+
+## Ejercicio 2
+
+Crea la tabla de verdad para la expresión lógica `p ∨ q`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `q`   | `p ∨ q` |
+|-------|-------|---------|
+| true  | true  | true    |
+| true  | false | true    |
+| false | true  | true    |
+| false | false | false   |
+
+</details>
+
+## Ejercicio 3
+
+Crea la tabla de verdad para la expresión lógica `¬p`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `¬p`  |
+|-------|-------|
+| true  | false |
+| false | true  |
+
+</details>
+
+## Ejercicio 4
+
+Crea la tabla de verdad para la expresión lógica `¬(p ∨ q)`:
+
+<details>
+<summary>Solución</summary>
+
+Negación de un OR: es true si ambos son false
+
+| `p`   | `q`   | `p ∨ q` | `¬(p ∨ q)` |
+|-------|-------|---------|------------|
+| true  | true  | true    | false      |
+| true  | false | true    | false      |
+| false | true  | true    | false      |
+| false | false | false   | true       |
+
+</details>
+
+## Ejercicio 5
+
+Crea la tabla de verdad para la expresión lógica `¬p ^ ¬q`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `q`   | `¬p`  | `¬q`  | `¬p ^ ¬q` |
+|-------|-------|-------|-------|-----------|
+| true  | true  | false | false | false     |
+| true  | false | false | true  | false     |
+| false | true  | true  | false | false     |
+| false | false | true  | true  | true      |
+
+¿Notas algo particular entre esta tabla de verdad y la anterior?
+</details>
+
+## Ejercicio 6
+
+Crea la tabla de verdad para la expresión lógica `p ^ (q ∨ ¬r)`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `q`   | `r`   | `¬r`  | `q ∨ ¬r` | `p ^ (q ∨ ¬r)` |
+|-------|-------|-------|-------|----------|----------------|
+| true  | true  | true  | false | true     | true           |
+| true  | true  | false | true  | true     | true           |
+| true  | false | true  | false | false    | false          |
+| true  | false | false | true  | true     | true           |
+| false | true  | true  | false | true     | false          |
+| false | true  | false | true  | true     | false          |
+| false | false | true  | false | false    | false          |
+| false | false | false | true  | true     | false          |
+
+</details>
+
+## Ejercicio 7
+
+Crea la tabla de verdad para la expresión lógica `(p ∨ q) ^ (¬p ∨ r)`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `q`   | `r`   | `¬p`  | `p ∨ q` | `¬p ∨ r` | `(p ∨ q) ^ (¬p ∨ r)` |
+|-------|-------|-------|-------|---------|---------|-----------------------|
+| true  | true  | true  | false | true    | true    | true                  |
+| true  | true  | false | false | true    | false   | false                 |
+| true  | false | true  | false | true    | true    | true                  |
+| true  | false | false | false | true    | false   | false                 |
+| false | true  | true  | true  | true    | true    | true                  |
+| false | true  | false | true  | true    | true    | true                  |
+| false | false | true  | true  | false   | true    | false                 |
+| false | false | false | true  | false   | true    | false                 |
+
+</details>
+
+## Ejercicio 8
+
+Crea la tabla de verdad para la expresión lógica `¬(p ^ q) ∨ (r ^ ¬s)`:
+
+<details>
+<summary>Solución</summary>
+
+| `p`   | `q`   | `r`   | `s`   | `p ^ q` | `¬(p ^ q)` | `¬s`  | `r ^ ¬s` | `¬(p ^ q) ∨ (r ^ ¬s)` |
+|-------|-------|-------|-------|---------|------------|-------|---------|------------------------|
+| true  | true  | true  | true  | true    | false      | false | false   | false                  |
+| true  | true  | true  | false | true    | false      | true  | true    | true                   |
+| true  | true  | false | true  | true    | false      | false | false   | false                  |
+| true  | true  | false | false | true    | false      | true  | false   | false                  |
+| true  | false | true  | true  | false   | true       | false | false   | true                   |
+| true  | false | true  | false | false   | true       | true  | true    | true                   |
+| true  | false | false | true  | false   | true       | false | false   | true                   |
+| true  | false | false | false | false   | true       | true  | false   | true                   |
+| false | true  | true  | true  | false   | true       | false | false   | true                   |
+| false | true  | true  | false | false   | true       | true  | true    | true                   |
+| false | true  | false | true  | false   | true       | false | false   | true                   |
+| false | true  | false | false | false   | true       | true  | false   | true                   |
+| false | false | true  | true  | false   | true       | false | false   | true                   |
+| false | false | true  | false | false   | true       | true  | true    | true                   |
+| false | false | false | true  | false   | true       | false | false   | true                   |
+| false | false | false | false | false   | true       | true  | false   | true                   |
+
+</details>

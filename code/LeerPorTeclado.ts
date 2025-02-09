@@ -1,3 +1,8 @@
+// Primero tenemos que tener el paquete instalado con npm, luego ejecutamos el siguiente comando en consola
+// npm install readline-sync
+// Y luego
+// npm install @types/node --save-dev
+// Por último importamos el paquete en el archivo de TypeScript
 import * as readline from 'readline';
 
 (async () => {
