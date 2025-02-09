@@ -4,3 +4,4 @@ test.ts
 LICENSE
 package-lock.json
 package.json
+*.js
