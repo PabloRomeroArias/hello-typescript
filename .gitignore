@@ -1,0 +1,9 @@
+/node_modules/
+LICENSE
+.vscode/
+package-lock.json
+package.json
+*.js
+tsconfig.json
+/src/
+/dist/
